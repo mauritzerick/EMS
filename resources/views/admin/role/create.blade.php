@@ -4,10 +4,17 @@
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-10">
-        @if(Session::has('message'))
-            <div class="alert alert-success">
-            {{Session::get('message')}}
-            </div>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">Role
+                    
+                </li>
+              </ol>
+            </nav>
+             @if(Session::has('message'))
+                <div class="alert alert-success">
+                    {{Session::get('message')}}
+                </div>
             @endif
                 <form action="{{route('roles.store')}}" method="post">@csrf
 

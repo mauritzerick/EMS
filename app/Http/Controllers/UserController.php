@@ -15,6 +15,7 @@ class UserController extends Controller
     {
         $users = User::get();
         return view('admin.user.index',compact('users'));
+
     }
 
     /**
@@ -55,10 +56,10 @@ class UserController extends Controller
             $image = 'avatar2.png';
         }
         $data['name'] = $request->firstname.' '.$request->lastname;
-        $data['image'] = $image;
-        $data['password']=bcrypt($request->password);
+        $data['image']=$image;
+        $data['password']= bcrypt($request->password);
         User::create($data);
-        return redirect()->back()->with('message','User created successfully');
+        return redirect()->back()->with('message','User created Successfully');
     }
 
     /**
@@ -93,7 +94,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request,[
+         $this->validate($request,[
             'name'=>'required',
             'email'=>'required|string|email|max:255|unique:users,email,'.$id,
             'department_id'=>'required',
@@ -102,7 +103,6 @@ class UserController extends Controller
             'start_from'=>'required',
             'designation'=>'required'
         ]);
-
         $data = $request->all();
         $user = User::find($id);
         if($request->hasFile('image')){
@@ -114,13 +114,14 @@ class UserController extends Controller
         if($request->password){
             $password = $request->password;
         }else{
-            $password = $user->password; 
+            $password = $user->password;
         }
         $data['image']=$image;
         $data['password']= bcrypt($password);
         $user->update($data);
-
-        return redirect()->back()->with('message','User updated successfully');
+        return redirect()->back()->with('message','User updated Successfully');
+       
+        
     }
 
     /**
@@ -131,8 +132,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        User::find($id)->delete();
-        return redirect()->back()->with('message','User deleted successfully');
+       User::find($id)->delete();
+        return redirect()->back()->with('message','User deleted Successfully');
 
     }
 }

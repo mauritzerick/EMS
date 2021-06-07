@@ -7,7 +7,7 @@
 
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page">All Users</li>
+                <li class="breadcrumb-item active" aria-current="page">All employee</li>
               </ol>
             </nav>
             @if(Session::has('message'))
@@ -15,8 +15,7 @@
                     {{Session::get('message')}}
                 </div>
             @endif
-
-         
+           
            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead>
                 <tr>
@@ -25,13 +24,14 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Role</th>
-                    <th>Department</th>
-                    <th>Designation</th>
+                    <th>Depart ment</th>
+                    <th>Post</th>
                     <th>Start Date</th>
                     <th>Address</th>
                     <th>Mobile</th>
                     <th>Edit</th>
                     <th>Delete</th>
+
                     
                 </tr>
             </thead>
@@ -41,28 +41,29 @@
                 @foreach($users as $key=>$user)
                 <tr>
                     <td>{{$key+1}}</td>
-                    <td><img src="{{asset('profile')}}/{{$user->image}}" width="60"></td>
+                    <td>
+                        <img src="{{asset('profile')}}/{{$user->image}}" width="60" >
+                    </td>
                     <td>{{$user->name}}</td>
                     <td>{{$user->email}}</td>
-                    <td>{{$user->role->name ?? ''}}</td>
-                    <td>{{$user->department->name ?? ''}}</td>
+                    <td><span class="badge badge-success">{{$user->role->name??''  }}</span></td>
+                    <td>{{$user->department->name ??''}}</td>
                     <td>{{$user->designation}}</td>
                     <td>{{$user->start_from}}</td>
                     <td>{{$user->address}}</td>
                     <td>{{$user->mobile_number}}</td>
-
                     <td>
-                        <a href="{{route('users.edit',[$user->id])}}"><i class="fas fa-edit"></i></a>
+                        @if(isset(auth()->user()->role->permission['name']['user']['can-edit']))
+                        <a href="{{route('users.edit',[$user->id])}}"><i class="fas fa-edit"></i></a>@endif
                     </td>
-                       
                     <td>
-                       
-                        <a href="#" data-toggle="modal" data-target="#exampleModal{{$user->id}}">
+                    @if(isset(auth()->user()->role->permission['name']['user']['can-delete']))
+                    <a href="#" data-toggle="modal" data-target="#exampleModal{{$user->id}}">
                         <i class="fas fa-trash"></i>
-                         </a>
-                 
-                        <!-- BS Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    </a>
+                    @endif
+                    <!-- Modal -->
+                <div class="modal fade" id="exampleModal{{$user->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div class="modal-dialog" role="document">
                     <form action="{{route('users.destroy',[$user->id])}}" method="post">@csrf
                         {{method_field('DELETE')}}
@@ -74,7 +75,6 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                      
                         Do you want to delete?
                       </div>
                       <div class="modal-footer">
@@ -86,7 +86,6 @@
                   </div>
                 </div>
                 <!--Modal end-->
-                        <!--Modal end-->
 
                    
                     </td>

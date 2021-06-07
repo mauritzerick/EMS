@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Department;
-
 class DepartmentController extends Controller
 {
     /**
@@ -41,7 +40,7 @@ class DepartmentController extends Controller
         ]);
         $data = $request->all();
         Department::create($data);
-        return redirect()->back()->with('message','Department created successfully');
+        return redirect()->back()->with('message','Department created Successfully');
     }
 
     /**
@@ -76,10 +75,11 @@ class DepartmentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $department = Department::find($id);
+        $department  = Department::find($id);
         $data = $request->all();
         $department->update($data);
         return redirect()->route('departments.index')->with('message','Record updated successfully');
+
     }
 
     /**
@@ -90,8 +90,9 @@ class DepartmentController extends Controller
      */
     public function destroy($id)
     {
-        $department = Department::find($id);
-        $department->delete();
-        return redirect()->route('departments.index')->with('message','Record deleted successfully');
+       $department = Department::find($id);
+       $department->delete();
+       return redirect()->route('departments.index')->with('message','Record deleted successfully');
+
     }
 }

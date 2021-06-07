@@ -3,7 +3,8 @@
 @include('admin.layouts.sidebar')
 <div id="layoutSidenav_content">
                 <main>
-    @yield('content')
+	@yield('content')
 </main>
 
-@include('admin.layouts.footer')
+@include('admin.layouts.fotter')
+
