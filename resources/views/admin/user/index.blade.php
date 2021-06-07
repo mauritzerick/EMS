@@ -44,8 +44,8 @@
                     <td><img src="{{asset('profile')}}/{{$user->image}}" width="60"></td>
                     <td>{{$user->name}}</td>
                     <td>{{$user->email}}</td>
-                    <td>{{$user->role->name}}</td>
-                    <td>{{$user->department->name}}</td>
+                    <td>{{$user->role->name ?? ''}}</td>
+                    <td>{{$user->department->name ?? ''}}</td>
                     <td>{{$user->designation}}</td>
                     <td>{{$user->start_from}}</td>
                     <td>{{$user->address}}</td>
@@ -57,7 +57,7 @@
                        
                     <td>
                        
-                        <a href="#" data-toggle="modal" data-target="#exampleModal">
+                        <a href="#" data-toggle="modal" data-target="#exampleModal{{$user->id}}">
                         <i class="fas fa-trash"></i>
                          </a>
                  

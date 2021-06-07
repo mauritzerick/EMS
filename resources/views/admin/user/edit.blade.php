@@ -14,7 +14,7 @@
             {{Session::get('message')}}
             </div>
             @endif
-        <form action="{{route('users.update',[$user->id])}}" method="post" enctype="multipart/form-data">@csrf
+        <form action="{{route('users.update',[$user->id])}}" method="post" enctype="multipart/form-data">@csrf {{method_field('PATCH')}}
 
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -22,47 +22,41 @@
                 <div class="card-header">General Information</div>
                 <div class="card-body">
                     <div class="form-group">
-                        <label>First name</label>
-                        <input type="text" name="firstname" class="form-control @error('firstname') is-invalid @enderror" required="">
-                        @error('firstname')
+                        <label>Full name</label>
+                        <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" required="" value="{{$user->name}}">
+                        @error('name')
                         <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                         </span>
                         @enderror
                     </div>
-                    <div class="form-group">
-                        <label>Last name</label>
-                        <input type="text" name="lastname" class="form-control @error('lastname') is-invalid @enderror" required="">
-                        @error('lastname')
-                        <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
+                    
                     <div class="form-group">
                         <label>Address</label>
-                        <input type="text" name="address" class="form-control">
+                        <input type="text" name="address" class="form-control" value="{{$user->address}}">
                         
                     </div>
                     
                     <div class="form-group">
                         <label>Mobile number </label>
-                        <input type="number" name="mobile_number" class="form-control">
+                        <input type="number" name="mobile_number" class="form-control" value="{{$user->mobile_number}}">
                     </div>
+
                     <div class="form-group">
                         <label>Department</label>
                          <select class="form-control" name="department_id" required="">
-                         @foreach(App\Department::all() as $department)
+                            @foreach(App\Department::all() as $department)
 
-                            <option value="{{$department->id}}">{{$department->name}}</option>
-                         @endforeach
+                                <option value="{{$department->id}}"@if($user->department_id==$department->id)selected @endif>{{$department->name}}</option>
+                            @endforeach
+
                            
                             
                         </select>
                     </div>
                     <div class="form-group">
                         <label>Designation</label>
-                        <input type="text" name="designation" class="form-control @error('designation') is-invalid @enderror" required="">
+                        <input type="text" name="designation" class="form-control @error('designation') is-invalid @enderror" required="" value="{{$user->designation}}">
                         @error('designation')
                         <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -71,7 +65,7 @@
                     </div>
                     <div class="form-group">
                         <label>Start date</label>
-                        <input type="date" name="start_from" class="form-control @error('start_from') is-invalid @enderror" placeholder="dd-mm-yyyy" required="">
+                        <input type="date" name="start_from" class="form-control @error('start_from') is-invalid @enderror" placeholder="dd-mm-yyyy" required="" value="{{$user->start_from}}">
                         @error('start_from')
                         <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -96,7 +90,7 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label>Email </label>
-                        <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" required="">
+                        <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" required="" value="{{$user->email}}">
                         @error('email')
                         <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -105,14 +99,14 @@
                     </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="password" name="password" class="form-control" required="">
+                        <input type="password" name="password" class="form-control">
                     </div>
                     <div class="form-group">
                         <label>Role</label>
                         <select class="form-control" name="role_id" required="">
                         @foreach(App\Role::all() as $role)
 
-                            <option value="{{$role->id}}">{{$role->name}}</option>
+                            <option value="{{$role->id}}"@if($user->role_id==$role->id)selected @endif>{{$role->name}}</option>
                          @endforeach
                            
                             
