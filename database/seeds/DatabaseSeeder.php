@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
             'password'=>bcrypt('password'),
             'department_id'=>'3',
             'role_id'=>4,
-            'designation'=>'Administrator'
+            'designation'=>'Administrator',
+            'start_from'=>'2021-06-01'
         ]);
     }
 }
