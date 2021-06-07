@@ -13,7 +13,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::get();
+        return view('admin.user.index',compact('users'));
     }
 
     /**
@@ -34,11 +35,30 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($erquest,[
+        $this->validate($request,[
             'firstname'=>'required',
             'lastname'=>'required',
-            'email'=>'required'
+            'email'=>'required|string|email|max:255|unique:users',
+            'password'=>'required|string',
+            'department_id'=>'required',
+            'role_id'=>'required',
+            'image'=>'required|mimes:jpeg,jpg,png',
+            'start_from'=>'required',
+            'designation'=>'required'
         ]);
+
+        $data = $request->all();
+        if($request->hasFile('image')){
+            $image = $request->image->hashName();
+            $request->image->move(public_path('profile'),$image);
+        }else{
+            $image = 'avatar2.png';
+        }
+        $data['name'] = $request->firstname.' '.$request->lastname;
+        $data['image'] = $image;
+        $data['password']=bcrypt($request->password);
+        User::create($data);
+        return redirect()->back()->with('message','User created successfully');
     }
 
     /**
