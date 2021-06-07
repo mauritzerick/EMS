@@ -14,7 +14,7 @@
             {{Session::get('message')}}
             </div>
             @endif
-        <form action="{{route('users.store')}}" method="post" enctype="multipart/form-data">@csrf
+        <form action="{{route('users.update',[$user->id])}}" method="post" enctype="multipart/form-data">@csrf
 
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -124,7 +124,7 @@
             </div>
             <br>
             <div class="form-group">
-                <button class="btn btn-primary " type="submit">Submit</button>
+                <button class="btn btn-primary " type="submit">Update</button>
             </div>
         </div>
       

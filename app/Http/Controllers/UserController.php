@@ -42,7 +42,7 @@ class UserController extends Controller
             'password'=>'required|string',
             'department_id'=>'required',
             'role_id'=>'required',
-            'image'=>'required|mimes:jpeg,jpg,png',
+            'image'=>'mimes:jpeg,jpg,png',
             'start_from'=>'required',
             'designation'=>'required'
         ]);
@@ -80,7 +80,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        return view('admin.user.edit',compact('user'));
     }
 
     /**

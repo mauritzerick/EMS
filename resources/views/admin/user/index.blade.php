@@ -30,6 +30,8 @@
                     <th>Start Date</th>
                     <th>Address</th>
                     <th>Mobile</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
                     
                 </tr>
             </thead>
@@ -39,24 +41,30 @@
                 @foreach($users as $key=>$user)
                 <tr>
                     <td>{{$key+1}}</td>
-                    <td><img src="{{asset('profile')}}/{{$user->image}}"></td>
+                    <td><img src="{{asset('profile')}}/{{$user->image}}" width="60"></td>
                     <td>{{$user->name}}</td>
-                    <td>{{$user->description}}</td>
+                    <td>{{$user->email}}</td>
+                    <td>{{$user->role->name}}</td>
+                    <td>{{$user->department->name}}</td>
+                    <td>{{$user->designation}}</td>
+                    <td>{{$user->start_from}}</td>
+                    <td>{{$user->address}}</td>
+                    <td>{{$user->mobile_number}}</td>
 
                     <td>
-                        <a href="{{route('departments.edit',[$department->id])}}"><i class="fas fa-edit"></i></a>
+                        <a href="{{route('users.edit',[$user->id])}}"><i class="fas fa-edit"></i></a>
                     </td>
                        
                     <td>
                        
-                        <a href="#" data-toggle="modal" data-target="#exampleModal{{$department->id}}">
+                        <a href="#" data-toggle="modal" data-target="#exampleModal">
                         <i class="fas fa-trash"></i>
                          </a>
                  
                         <!-- BS Modal -->
-                <div class="modal fade" id="exampleModal{{$department->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div class="modal-dialog" role="document">
-                    <form action="{{route('departments.destroy',[$department->id])}}" method="post">@csrf
+                    <form action="{{route('users.destroy',[$user->id])}}" method="post">@csrf
                         {{method_field('DELETE')}}
                     <div class="modal-content">
                       <div class="modal-header">
