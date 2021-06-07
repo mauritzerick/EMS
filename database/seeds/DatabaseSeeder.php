@@ -15,7 +15,10 @@ class DatabaseSeeder extends Seeder
         User::create([
             'name'=>'Mauritz Erick',
             'email'=>'mauritz.e@enableps.com',
-            'password'=>bcrypt('password')
+            'password'=>bcrypt('password'),
+            'department_id'=>'3',
+            'role_id'=>4,
+            'designation'=>'Administrator'
         ]);
     }
 }
