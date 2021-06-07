@@ -19,7 +19,8 @@ class DatabaseSeeder extends Seeder
             'department_id'=>'3',
             'role_id'=>4,
             'designation'=>'Administrator',
-            'start_from'=>'2021-06-01'
+            'start_from'=>'2021-06-01',
+            'image'=>'avatar2.png'
         ]);
     }
 }
