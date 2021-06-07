@@ -16,8 +16,8 @@ class DatabaseSeeder extends Seeder
             'name'=>'Mauritz Erick',
             'email'=>'mauritz.e@enableps.com',
             'password'=>bcrypt('password'),
-            'department_id'=>'3',
-            'role_id'=>4,
+            'department_id'=>'1',
+            'role_id'=>'1',
             'designation'=>'Administrator',
             'start_from'=>'2021-06-01',
             'image'=>'avatar2.png'
