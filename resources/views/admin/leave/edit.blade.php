@@ -46,7 +46,7 @@
                         <select class="form-control" name="type">
                             <option value="annualleave">Annual Leave</option>
                             <option value="sickleave">Sick Leave</option>
-                            <option value="parental">Parental Leave</option>
+                            <option value="carers">Carers Leave</option>
                             <option value="other">Other Leave</option>
                         </select>
                         
