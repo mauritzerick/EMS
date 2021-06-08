@@ -17,7 +17,7 @@
             </nav>
             @if(count($notices)>0)
             @foreach($notices as $notice)
-            <div class="card alert alert-info">
+            <div class="card alert alert-primary">
                 <div class="card-header alert alert-warning" style="color:black;">{{$notice->title}}</div>
 
                 <div class="card-body" style="color:black;">
