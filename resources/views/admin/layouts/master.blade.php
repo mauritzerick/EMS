@@ -6,5 +6,5 @@
 	@yield('content')
 </main>
 
-@include('admin.layouts.fotter')
+@include('admin.layouts.footer')
 
