@@ -23,11 +23,11 @@
 
                 <div class="card-body">
                    <div class="form-group">
-                    <label>select</label>
+                    <label>Mail to</label>
                     <select id="mail" class="form-control">
-                        <option value="0">Mail to all staff</option>
-                        <option value="1">Choose Department</option>
-                        <option value="2">Choose Person</option>
+                        <option value="0">All staff</option>
+                        <option value="1">Department</option>
+                        <option value="2">Person</option>
                         
                     </select>
                     <br>

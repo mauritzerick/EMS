@@ -7,8 +7,7 @@
                             <div class="sb-sidenav-menu-heading">Core</div>
                             <a class="nav-link" href="{{url('/')}}"
                                 ><div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard</a
-                            >
+                                Dashboard</a>
                             <div class="sb-sidenav-menu-heading">Interface</div>
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts"
                                 >
@@ -50,13 +49,13 @@
                                     ></a>
                                     <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
-        @if(isset(auth()->user()->role->permission['name']['user']['can-list']))
+                                         @if(isset(auth()->user()->role->permission['name']['user']['can-list']))
                                             <a class="nav-link" href="{{route('users.index')}}">View User</a>
 
-@endif
-            @if(isset(auth()->user()->role->permission['name']['user']['can-add']))
+                                        @endif
+                                        @if(isset(auth()->user()->role->permission['name']['user']['can-add']))
                                             <a class="nav-link" href="{{route('users.create')}}">Create User</a>
-@endif
+                                        @endif
                                         </nav>
 
                                     </div>

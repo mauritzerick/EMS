@@ -7,11 +7,10 @@
                         </ol>
                         <div class="row">
 
-
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
                                     <div class="card-body">Users
-                                    
+                            
                                         <p><i class="fas fa-user fa-fw" style="font-size:100px;"></i></p>
                                     </div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
@@ -22,7 +21,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+                        
 
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-warning text-white mb-4">
