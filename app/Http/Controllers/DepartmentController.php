@@ -40,7 +40,7 @@ class DepartmentController extends Controller
         ]);
         $data = $request->all();
         Department::create($data);
-        return redirect()->back()->with('message','Department created Successfully');
+        return redirect()->back()->with('message','Department created successfully');
     }
 
     /**

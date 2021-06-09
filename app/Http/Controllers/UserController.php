@@ -59,7 +59,7 @@ class UserController extends Controller
         $data['image']=$image;
         $data['password']= bcrypt($request->password);
         User::create($data);
-        return redirect()->back()->with('message','User created Successfully');
+        return redirect()->back()->with('message','User created successfully');
     }
 
     /**
@@ -119,7 +119,7 @@ class UserController extends Controller
         $data['image']=$image;
         $data['password']= bcrypt($password);
         $user->update($data);
-        return redirect()->back()->with('message','User updated Successfully');
+        return redirect()->back()->with('message','User updated successfully');
        
         
     }
@@ -133,7 +133,7 @@ class UserController extends Controller
     public function destroy($id)
     {
        User::find($id)->delete();
-        return redirect()->back()->with('message','User deleted Successfully');
+        return redirect()->back()->with('message','User deleted successfully');
 
     }
 }

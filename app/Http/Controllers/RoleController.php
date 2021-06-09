@@ -39,7 +39,7 @@ class RoleController extends Controller
             'name'=>'required|unique:roles'
         ]);
         Role::create($request->all());
-        return redirect()->back()->with('message','Role created Successfully');
+        return redirect()->back()->with('message','Role created successfully');
     }
 
     /**
@@ -79,7 +79,7 @@ class RoleController extends Controller
         ]);
         $role = Role::find($id);
         $role->update($request->all());
-        return redirect()->route('roles.index')->with('message','Role updated Successfully');
+        return redirect()->route('roles.index')->with('message','Role updated successfully');
  
    
     
@@ -95,6 +95,6 @@ class RoleController extends Controller
     public function destroy($id)
     {
         Role::find($id)->delete();
-        return redirect()->route('roles.index')->with('message','Role deleted Successfully');
+        return redirect()->route('roles.index')->with('message','Role deleted successfully');
     }
 }

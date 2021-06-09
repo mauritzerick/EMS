@@ -42,7 +42,7 @@ class NoticeCOntroller extends Controller
             'name'=>'required'
         ]);
         Notice::create($request->all());
-        return redirect()->route('notices.index')->with('message','Notice created Successfully');
+        return redirect()->route('notices.index')->with('message','Notice created successfully');
     }
 
     /**
@@ -79,7 +79,7 @@ class NoticeCOntroller extends Controller
     {
         $notice = Notice::find($id);
         $notice->update($request->all());
-        return redirect()->route('notices.index')->with('message','Notice updated Successfully');
+        return redirect()->route('notices.index')->with('message','Notice updated successfully');
     }
 
     /**
@@ -91,6 +91,6 @@ class NoticeCOntroller extends Controller
     public function destroy($id)
     {
         Notice::find($id)->delete();
-        return redirect()->route('notices.index')->with('message','Notice deleted Successfully');
+        return redirect()->route('notices.index')->with('message','Notice deleted successfully');
     }
 }
