@@ -69,16 +69,17 @@
                             <div class="col-xl-12">
                                 <div class="card mb-4">
                                     <div class="card-header">Your Details</div>
-                                     <div class="card-header" style="background-color: rgba(137, 196, 244, 1)">Email:{{Auth::user()->email}}</div>
-                                     <div class="card-header" style="background-color: rgba(137, 196, 244, 1)">Address:{{Auth::user()->address}}</div>
-                                     <div class="card-header" style="background-color: rgba(137, 196, 244, 1)">Mobile number:{{Auth::user()->mobile_number}}</div>
-                                     <div class="card-header" style="background-color: rgba(137, 196, 244, 1)">Designation:{{Auth::user()->designation}}</div>
-                                     <div class="card-header" style="background-color: rgba(137, 196, 244, 1)">Start date:{{Auth::user()->start_from}}</div>
-                                     <div class="card-header" style="background-color: rgba(137, 196, 244, 1)">Department:{{Auth::user()->department->name}}</div>
-                                     <div class="card-header " style="background-color: rgba(137, 196, 244, 1)"><p class="badge badge-success">Role:{{Auth::user()->role->name}}</p></div>
+                                     <div class="card-header" >Email: {{Auth::user()->email}}</div>
+                                     <div class="card-header" >Address: {{Auth::user()->address}}</div>
+                                     <div class="card-header" >Mobile number: {{Auth::user()->mobile_number}}</div>
+                                     <div class="card-header" >Designation: {{Auth::user()->designation}}</div>
+                                     <div class="card-header" >Start date: {{Auth::user()->start_from}}</div>
+                                     <div class="card-header" >Department: {{Auth::user()->department->name}}</div>
+                                     <div class="card-header " ><p class="badge badge-success">Role: {{Auth::user()->role->name}}</p></div>
                                 </div>
                             </div>
                         </div>
+                        <!-- style="background-color: rgba(137, 196, 244, 1)" -->
 
 
 

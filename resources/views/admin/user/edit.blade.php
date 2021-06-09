@@ -56,7 +56,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Designation</label>
+                        <label>Office</label>
                         <input type="text" name="designation" class="form-control @error('designation') is-invalid @enderror" required="" value="{{$user->designation}}">
                          @error('designation')
                                     <span class="invalid-feedback" role="alert">

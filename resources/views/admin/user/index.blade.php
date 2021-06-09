@@ -26,7 +26,7 @@
                     <th>Email</th>
                     <th>Role</th>
                     <th>Department</th>
-                    <th>Designation</th>
+                    <th>Office</th>
                     <th>Start Date</th>
                     <th>Address</th>
                     <th>Mobile</th>
