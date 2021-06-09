@@ -68,11 +68,11 @@
                                         <nav class="sb-sidenav-menu-nested nav">
         @if(isset(auth()->user()->role->permission['name']['permission']['can-list']))
                                             <a class="nav-link" href="{{route('permissions.index')}}">View 
-                                        permission</a>
+                                        Permission</a>
                                         @endif
         @if(isset(auth()->user()->role->permission['name']['permission']['can-add']))
                                         <a class="nav-link" href="{{route('permissions.create')}}">Create 
-                                        permission</a>
+                                        Permission</a>
 @endif
                                     </nav>
 
