@@ -63,7 +63,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Designation</label>
+                        <label>Location</label>
                         <input type="text" name="designation" class="form-control @error('designation') is-invalid @enderror" required="">
                          @error('designation')
                                     <span class="invalid-feedback" role="alert">
