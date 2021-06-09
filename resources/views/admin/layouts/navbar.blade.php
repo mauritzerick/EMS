@@ -9,6 +9,7 @@
         <title>GA - EMS</title>
 
         <link href="{{asset('template/dist/css/styles.css')}}" rel="stylesheet" />
+        <link rel="shortcut icon" href="{{ asset('/favicon.ico') }}">
 
         <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css">
