@@ -114,7 +114,7 @@
                             @endif
                         @if(isset(auth()->user()->role->permission['name']['notice']['can-add']))
                     <a class="nav-link" href="{{route('notices.create')}}">Create 
-                    leave</a>
+                    Notice</a>
                     @endif
                 </nav>
 
@@ -122,7 +122,7 @@
             @if(isset(auth()->user()->role->permission['name']['mail']['can-add']))
                             <a class="nav-link" href="{{url('/mail')}}" style="font-size:18px;" 
                                 ><div class="sb-nav-link-icon"><i class="fas fa-envelope" style="font-size:16px;"></i></div>
-                                Mail</a
+                                Mail</a>
             @endif
                            
                     
