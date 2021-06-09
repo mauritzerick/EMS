@@ -27,7 +27,7 @@
                     <select id="mail" class="form-control">
                         <option value="0">All staff</option>
                         <option value="1">Department</option>
-                        <option value="2">Person</option>
+                        <option value="2">Private</option>
                         
                     </select>
                     <br>
