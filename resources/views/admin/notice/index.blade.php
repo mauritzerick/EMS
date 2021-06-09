@@ -18,11 +18,11 @@
             @if(count($notices)>0)
             @foreach($notices as $notice)
             <div class="card alert alert-primary">
-                <div class="card-header alert alert-warning" style="color:black;">{{$notice->title}}</div>
+                <div class="card-header alert alert-warning" style="color:red;">{{$notice->title}}</div>
 
                 <div class="card-body" style="color:black;">
                     <p>{{$notice->description}}</p>
-                    <p class="badge badge-success">Data:{{$notice->date}}</p>
+                    <p class="badge badge-success">Date:{{$notice->date}}</p>
                      <p class="badge badge-warning">Created By:{{$notice->name}}</p>
                 </div>
                 <div class="card-footer">
@@ -42,7 +42,7 @@
                         {{method_field('DELETE')}}
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Delete Confirm</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Delete Confirmation</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
