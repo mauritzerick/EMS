@@ -197,7 +197,7 @@ figure {
 
 img {
   vertical-align: middle;
-  border-style: none;
+  border-radius: 50%;
 }
 
 svg {
@@ -9904,6 +9904,8 @@ blockquote {
   tr,
 img {
     page-break-inside: avoid;
+    border-radius: 50%;
+    
   }
 
   p,
