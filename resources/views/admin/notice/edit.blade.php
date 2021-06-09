@@ -57,7 +57,7 @@
                     <div class="form-group">
                          @if(isset(auth()->user()->role->permission['name']['notice']['can-edit']))
                         <button type="submit" class="btn btn-primary">Update</button>
-                        @endi
+                        @endif
                     </div>
                 </div>
             </div>
