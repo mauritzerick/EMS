@@ -95,19 +95,30 @@ Most of the code is written in blade templating engine provided by Laravel. This
 Middleware is installed in this project to ensure verification of the user of the application is authenticated. If the user does not have permission to access some particular directory, middleware will redirect the logged in user to 401 page. However, if the user have the permission, middleware will allow the request to proceed further into the application.
 
 
-### Commands
-Project setup
-```composer create-project laravel/laravel EMS```
+## Commands
 
-Starting the server
-```php artisan serve```
+### Project setup
+```
+composer create-project laravel/laravel EMS
+```
 
-Database migration
-```php artisan migrate```
+### Starting the server
+```
+php artisan serve
+```
 
-Database seeds
-```php artisan db:seed```
+### Database migration
+```
+php artisan migrate
+```
 
-Middleware installation
-```php artisan make:middleware EnsureTokenIsValid```
+### Database seeds
+```
+php artisan db:seed
+```
+
+### Middleware installation
+```
+php artisan make:middleware EnsureTokenIsValid
+```
 
