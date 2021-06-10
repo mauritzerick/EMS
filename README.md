@@ -96,9 +96,18 @@ Middleware is installed in this project to ensure verification of the user of th
 
 
 ### Commands
+Project setup
 ```composer create-project laravel/laravel EMS```
+
+Starting the server
 ```php artisan serve```
+
+Database migration
 ```php artisan migrate```
+
+Database seeds
 ```php artisan db:seed```
+
+Middleware installation
 ```php artisan make:middleware EnsureTokenIsValid```
 
