@@ -1,11 +1,73 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+# GA - EMS
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+![Laravel1](https://imgur.com/a/TgNGztQ)
+![Laravel2](https://imgur.com/a/dWzTxrJ)
+
+#### Access site: [GA-EMS](http://phplaravel-610700-1978850.cloudwaysapps.com/)
+
+## General Assembly Project 3 - Laravel
+Date: 11 June 2021
+
+Main goal: Building a functional employee management portal based on a CRUD system.
+
+## Introduction
+What is Employee Management System?
+Employee Management System is a platform where all work-related as well as important personal details of an employee is stored and managed in a secure way. By using this system, you can manage admin activities in an easier and quicker way.
+Admin will have all the permissions to manage the application. For example, add, edit, view and delete the components.
+There will be 4 main components inside the application:
+1. Departments
+2. Users
+3. Staff leave
+4. Notice
+
+Most of the code is written in blade templating engine provided by Laravel. This helps to design unique layout and easy routing and structure.
+
+## Middleware
+Middleware is installed in this project to ensure verification of the user within the application is authenticated. If the user does not have permission to access some particular directory, middleware will redirect the logged in user to 401 page. However, if the user have the permission, middleware will allow the request to proceed further into the application.
+
+## CSRF Overview
+Cross-Site Request Forgery (CSRF) is an attack that forces an end user to execute unwanted actions on a web application in which they're currently authenticated. ... If the victim is an administrative account, CSRF can compromise the entire web application.
+
+
+## Commands
+
+#### Project setup
+```
+composer create-project laravel/laravel EMS
+```
+
+#### Starting the server
+```
+php artisan serve
+```
+
+#### Database migration
+```
+php artisan migrate
+```
+
+#### Database seeds
+```
+php artisan db:seed
+```
+
+#### Datepicker installation
+```
+composer create-project --prefer-dist laravel/laravel laravel_datepicker
+```
+
+#### Middleware installation
+```
+php artisan make:middleware EnsureTokenIsValid
+```
+
+
+
+
+
+
+
+
 
 ## About Laravel
 
@@ -77,56 +139,3 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-
-
-## Introduction
-What is Employee Management System?
-Employee Management System is a platform where all work-related as well as important personal details of an employee is stored and managed in a secure way. By using this system, you can manage admin activities in an easier and quicker way.
-Admin will have all the permissions to manage the application. For example, add, edit, view and delete the components.
-There will be 4 main components inside the application:
-1. Departments
-2. Users
-3. Staff leave
-4. Notice
-
-Most of the code is written in blade templating engine provided by Laravel. This helps to design unique layout and easy routing and structure.
-
-## Middleware
-Middleware is installed in this project to ensure verification of the user of the application is authenticated. If the user does not have permission to access some particular directory, middleware will redirect the logged in user to 401 page. However, if the user have the permission, middleware will allow the request to proceed further into the application.
-
-## CSRF Overview
-Cross-Site Request Forgery (CSRF) is an attack that forces an end user to execute unwanted actions on a web application in which they're currently authenticated. ... If the victim is an administrative account, CSRF can compromise the entire web application.
-
-
-## Commands
-
-#### Project setup
-```
-composer create-project laravel/laravel EMS
-```
-
-#### Starting the server
-```
-php artisan serve
-```
-
-#### Database migration
-```
-php artisan migrate
-```
-
-#### Database seeds
-```
-php artisan db:seed
-```
-
-#### Datepicker installation
-```
-composer create-project --prefer-dist laravel/laravel laravel_datepicker
-```
-
-#### Middleware installation
-```
-php artisan make:middleware EnsureTokenIsValid
-```
-
