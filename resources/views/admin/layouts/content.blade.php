@@ -82,10 +82,6 @@
                         <!-- style="background-color: rgba(137, 196, 244, 1)" -->
 
 
-
-
-
-
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="card mb-4">

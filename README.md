@@ -79,8 +79,23 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 
-## Read
+## Introduction
 What is employee management system?
 An employee management system is a platform where all work-related as well as important personal details of an employee is stored and managed in a secure way. By using this system, you can manage admin activities in an easier and quicker way.
 
 Employees are the pillar of any organization and an ideal employee management tool makes a big difference to an organization.
+
+
+## Middleware
+Middleware is installed in this project to ensure verification of the user of the application is authenticated. If the user does not have permission to access some particular directory, middleware will redirect the logged in user to 401 page. However, if the user have the permission, middleware will allow the request to proceed further into the application.
+
+
+
+
+### Commands
+composer create-project laravel/laravel EMS
+php artisan serve
+php artisan migrate
+php artisan db:seed
+php artisan make:middleware EnsureTokenIsValid
+
