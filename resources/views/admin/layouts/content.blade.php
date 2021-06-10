@@ -14,7 +14,7 @@
                                         <p><i class="fas fa-user fa-fw" style="font-size:100px;"></i></p>
                                     </div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#" style="font-size:18px;"> 
+                                        <a class="small text-white stretched-link" href="{{route('users.index')}}" style="font-size:18px;"> 
                                             {{App\User::all()->count()}}
                                         </a>
                                         <div class="small text-white"></div>
@@ -29,7 +29,7 @@
                                         <p><i class="fas fa-home" style="font-size:100px;"></i></p>
                                     </div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#" style="font-size:18px;">
+                                        <a class="small text-white stretched-link" href="{{route('departments.index')}}" style="font-size:18px;">
                                             {{App\Department::all()->count()}}
                                         </a>
                                         <div class="small text-white"></div>
@@ -42,7 +42,7 @@
                                         <p><i class="fas fa-envelope" style="font-size:100px;"></i></p>
                                     </div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#" style="font-size:18px;">
+                                        <a class="small text-white stretched-link" href="{{route('notices.index')}}" style="font-size:18px;">
                                             {{App\Notice::all()->count()}}
                                         </a>
                                         <div class="small text-white"></div>
@@ -55,7 +55,7 @@
                                         <p><i class="fas fa-book" style="font-size:100px;"></i></p>
                                     </div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#" style="font-size:18px;">
+                                        <a class="small text-white stretched-link" href="{{route('leaves.index')}}"style="font-size:18px;">
                                             
                                             {{App\Leave::all()->count()}}
                                         </a>
@@ -75,7 +75,7 @@
                                      <div class="card-header" >Designation: {{Auth::user()->designation}}</div>
                                      <div class="card-header" >Start date: {{Auth::user()->start_from}}</div>
                                      <div class="card-header" >Department: {{Auth::user()->department->name}}</div>
-                                     <div class="card-header " ><p class="badge badge-success">Role: {{Auth::user()->role->name}}</p></div>
+                                     <div class="card-header " ><p class="badge badge-success">Role:{{Auth::user()->role->name}}</p></div>
                                 </div>
                             </div>
                         </div>
