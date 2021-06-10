@@ -1,6 +1,6 @@
 # GA - EMS
 
-![Laravel1](https://imgur.com/a/TgNGztQ.png)
+![Laravel1](https://i.imgur.com/vmF0UJS.png)
 ![Laravel2](https://imgur.com/a/dWzTxrJ.png)
 
 #### Access site: [GA-EMS](http://phplaravel-610700-1978850.cloudwaysapps.com/)
