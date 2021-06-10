@@ -1,7 +1,7 @@
 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div><a href="#">Copyright &copy; Mauritz 2021</a></div>
+                            <div><a href="#">&copy; Mauritz 2021</a></div>
                             <a href="https://www.facebook.com/mauritz.erick" target="_blank"><i class="fab fa-facebook"></i></a>
                             <a href="https://www.instagram.com/mauritzerick/" target="_blank"><i class="fab fa-instagram"></i></a>
                             <a href="https://www.linkedin.com/in/mauritzerick/" target="_blank"><i class="fab fa-linkedin"></i></a>
