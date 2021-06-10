@@ -80,8 +80,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 
 ## Introduction
-What is employee management system?
-Employee management system is a platform where all work-related as well as important personal details of an employee is stored and managed in a secure way. By using this system, you can manage admin activities in an easier and quicker way.
+What is Employee Management System?
+Employee Management System is a platform where all work-related as well as important personal details of an employee is stored and managed in a secure way. By using this system, you can manage admin activities in an easier and quicker way.
 Admin will have all the permissions to manage the application. For example, add, edit, view and delete the components.
 There will be 4 main components inside the application:
 1. Departments
@@ -89,14 +89,16 @@ There will be 4 main components inside the application:
 3. Staff leave
 4. Notice
 
+Most of the code is written in blade templating engine provided by Laravel. This helps to design unique layout and easy routing and structure.
+
 ## Middleware
 Middleware is installed in this project to ensure verification of the user of the application is authenticated. If the user does not have permission to access some particular directory, middleware will redirect the logged in user to 401 page. However, if the user have the permission, middleware will allow the request to proceed further into the application.
 
 
 ### Commands
-composer create-project laravel/laravel EMS
-php artisan serve
-php artisan migrate
-php artisan db:seed
-php artisan make:middleware EnsureTokenIsValid
+```composer create-project laravel/laravel EMS```
+```php artisan serve`
+`php artisan migrate`
+`php artisan db:seed`
+`php artisan make:middleware EnsureTokenIsValid`
 
