@@ -117,6 +117,11 @@ php artisan migrate
 php artisan db:seed
 ```
 
+#### Datepicker installation
+```
+composer create-project --prefer-dist laravel/laravel laravel_datepicker
+```
+
 #### Middleware installation
 ```
 php artisan make:middleware EnsureTokenIsValid
