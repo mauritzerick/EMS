@@ -94,6 +94,9 @@ Most of the code is written in blade templating engine provided by Laravel. This
 ## Middleware
 Middleware is installed in this project to ensure verification of the user of the application is authenticated. If the user does not have permission to access some particular directory, middleware will redirect the logged in user to 401 page. However, if the user have the permission, middleware will allow the request to proceed further into the application.
 
+## CSRF Overview
+Cross-Site Request Forgery (CSRF) is an attack that forces an end user to execute unwanted actions on a web application in which they're currently authenticated. ... If the victim is an administrative account, CSRF can compromise the entire web application.
+
 
 ## Commands
 

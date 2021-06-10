@@ -94,3 +94,5 @@ class NoticeCOntroller extends Controller
         return redirect()->route('notices.index')->with('message','Notice deleted successfully');
     }
 }
+
+
